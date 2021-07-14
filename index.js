@@ -19,22 +19,15 @@ $(function () {
 
     // 送信
     $('form').submit(function () {
-        var detail = $('input[name="detail"]').val();
         var date = $('input[name="date"]').val();
+        var number = $('input[name="number"]:checked').val();
         var names = '';
         $('#form-name').children().each(function (i, elm) {
             names += $(elm).val() + '、';
         })
         names = names.slice(0, -1);
 
-        var kana = '';
-        $('#form-names').children().each(function (i, elm) {
-            kana += $(elm).val() + '、';
-        })
-        kana = kana.slice(0, -1);
-
-
-        var msg = `詳細：${detail}\n希望日：${date}\nお名前：${names}\nおなまえ：${kana}`;
+        var msg = `希望日：${date}\n人数：${number}\n氏名：${names}`;
         sendText(msg);
 
         return false;
