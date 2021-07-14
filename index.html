@@ -13,19 +13,23 @@
 <body>
     <form class="w-75 mx-auto">
 
-        <p class="mt-3">以下に情報を入力して送信ボタンを押してください</p>
+        <p class="mt-3">以下に予約情報を入力して送信ボタンを押してください</p>
 
-        <p class="mt-3">ご希望のメニュー</p>
-        <div id="form-text" name="menu1">
-            <option value="炊事など家事全般">炊事など家事全般</option>
-            <option value="お家全体の掃除">お家全体の掃除</option>
-            <option value="空き家管理">空き家管理</option>
-            <option value="水まわりの清掃">水まわりの清掃</option>
-            <option value="網戸･ガラス窓の清掃">網戸･ガラス窓の清掃</option>
-            <option value="エアコンクリーニング">エアコンクリーニング</option>
-            <option value="お庭のお手入れ">お庭のお手入れ</option>
-            <option value="お墓のお手入れ">お墓のお手入れ</option>
-            <option value="その他ご要望">その他ご要望</option>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <p class="mt-3">Dropdown button</p>
+            </button>
+             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" name="menu1">
+            <li><a class="dropdown-item" >炊事など家事全般</a></li>
+            <li><a class="dropdown-item" >お家全体の掃除</a></li>
+            <li><a class="dropdown-item" >空き家管理</a></li>
+            <li><a class="dropdown-item" >水まわりの清掃</a></li>
+            <li><a class="dropdown-item" >網戸･ガラス窓の清掃</a></li>
+            <li><a class="dropdown-item" >エアコンクリーニング</a></li>
+            <li><a class="dropdown-item" >お庭のお手入れ</a></li>
+            <li><a class="dropdown-item" >お墓のお手入れ</a></li>
+            <li><a class="dropdown-item" >その他ご要望</a></li>
+             </ul>
         </div>
 
         <p class="mt-3">詳細をご記入ください。</p>
@@ -47,6 +51,7 @@
         <div id="form-names">
             <input class="form-control w-100 mt-1" name="kana" maxlength="10">
         </div>
+
 
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
