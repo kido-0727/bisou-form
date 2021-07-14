@@ -20,6 +20,8 @@ $(function () {
     // 送信
     $('form').submit(function () {
         var date = $('input[name="date"]').val();
+        var menu1 = $('input[name="menu1"]').val();
+        var detail = $('input[name="detail"]').val();
         var names = '';
         $('#form-name').children().each(function (i, elm) {
             names += $(elm).val() + '、';
@@ -33,7 +35,7 @@ $(function () {
         kana = kana.slice(0, -1);
 
 
-        var msg = `希望日：${date}\nお名前：${names}\nおなまえ：${kana}`;
+        var msg = `メニュー：${menu}\n詳細：${detail}\n希望日：${date}\nお名前：${names}\nおなまえ：${kana}`;
         sendText(msg);
 
         return false;
